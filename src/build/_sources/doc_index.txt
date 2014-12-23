@@ -16,9 +16,11 @@ Contents:
 		Cat.rst
 		Car.rst
 		Human.rst
-
-
-
+		Factory.rst
+		CircleFactory.rst
+		SquareFactory.rst
+		Circle.rst
+		Square.rst
 
 
 Indices and tables

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>adapter.Human &mdash; A05-Design Patterns 3.3.5 documentation</title>
+    <title>factory.CircleFactory &mdash; A05-Design Patterns 3.3.5 documentation</title>
     
     <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -43,15 +43,24 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <h1>Source code for adapter.Human</h1><div class="highlight"><pre>
+  <h1>Source code for factory.CircleFactory</h1><div class="highlight"><pre>
 <span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;cmaran&#39;</span>
 
-<div class="viewcode-block" id="Human"><a class="viewcode-back" href="../../SquareFactory.html#adapter.Human.Human">[docs]</a><span class="k">class</span> <span class="nc">Human</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="kn">from</span> <span class="nn">factory</span> <span class="kn">import</span> <span class="n">Circle</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Human&quot;</span>
-    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s">&quot;&#39;hello&#39;&quot;</span></div>
+<div class="viewcode-block" id="CircleFactory"><a class="viewcode-back" href="../../CircleFactory.html#factory.CircleFactory.CircleFactory">[docs]</a><span class="k">class</span> <span class="nc">CircleFactory</span><span class="p">:</span>
+
+<div class="viewcode-block" id="CircleFactory.getShape"><a class="viewcode-back" href="../../CircleFactory.html#factory.CircleFactory.CircleFactory.getShape">[docs]</a>    <span class="k">def</span> <span class="nf">getShape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        returns the shape</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Circle</span><span class="o">.</span><span class="n">Circle</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="CircleFactory.getCorners"><a class="viewcode-back" href="../../CircleFactory.html#factory.CircleFactory.CircleFactory.getCorners">[docs]</a>    <span class="k">def</span> <span class="nf">getCorners</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        returns the number of corners</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s">&quot;0 Corners&quot;</span></div></div>
 </pre></div>
 
           </div>
