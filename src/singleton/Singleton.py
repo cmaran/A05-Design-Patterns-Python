@@ -21,5 +21,5 @@ class Singleton():
 
     def __call__(self):
         if self.instance == None:  # man überprüft beim Aufruf, instance none ist
-            self.instance = self.klasse()  # wenn ja, wird die Klasse neu erstellt
+            self.instance = self.klasse()  # wenn ja, wird eine neue Instanz der Klasse erstellt
         return self.instance  # die instance wird zurückgegeben
