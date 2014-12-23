@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>observer.TestObserver &mdash; A05-Design Patterns 3.3.5 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.3.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="A05-Design Patterns 3.3.5 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="../../doc_index.html">A05-Design Patterns 3.3.5 documentation</a> &raquo;</li>
+          <li><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <h1>Source code for observer.TestObserver</h1><div class="highlight"><pre>
+<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;mdorfinger&#39;</span>
+
+<span class="kn">from</span> <span class="nn">observer</span> <span class="kn">import</span> <span class="n">Observable</span><span class="p">,</span> <span class="n">Observer</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Die Klasse TestObserver testet die 2 anderen Klasse und das Prinzip des Observer-Patterns. Dazu wird ein Observable</span>
+<span class="sd">und 3 Observers erstellt</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="TestObserver"><a class="viewcode-back" href="../../TestObserver.html#observer.TestObserver.TestObserver">[docs]</a><span class="k">class</span> <span class="nc">TestObserver</span><span class="p">():</span>
+    <span class="n">obs</span> <span class="o">=</span> <span class="n">Observable</span><span class="o">.</span><span class="n">ConcreteObservable</span><span class="p">()</span>  <span class="c"># ein konkretes Observable wird erstellt</span>
+    <span class="n">concrete_observer1</span> <span class="o">=</span> <span class="n">Observer</span><span class="o">.</span><span class="n">ConcreteObserver</span><span class="p">()</span>  <span class="c"># 3 Observer werden erstellt</span>
+    <span class="n">concrete_observer2</span> <span class="o">=</span> <span class="n">Observer</span><span class="o">.</span><span class="n">ConcreteObserver</span><span class="p">()</span>
+    <span class="n">concrete_observer3</span> <span class="o">=</span> <span class="n">Observer</span><span class="o">.</span><span class="n">ConcreteObserver</span><span class="p">()</span>
+    <span class="n">obs</span><span class="o">.</span><span class="n">add_observer</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">concrete_observer1</span><span class="p">)</span>  <span class="c"># und zum Observable hinzugefügt</span>
+    <span class="n">obs</span><span class="o">.</span><span class="n">add_observer</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">concrete_observer2</span><span class="p">)</span>
+    <span class="n">obs</span><span class="o">.</span><span class="n">add_observer</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">concrete_observer3</span><span class="p">)</span>
+    <span class="n">obs</span><span class="o">.</span><span class="n">notify_observers</span><span class="p">(</span><span class="s">&#39;message to all observer&#39;</span><span class="p">)</span> <span class="c"># Nachricht muss 3 mal gesendet werden (an 3 Observer)</span>
+    <span class="n">obs</span><span class="o">.</span><span class="n">remove_observer</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">concrete_observer3</span><span class="p">)</span>  <span class="c"># Observer 3 wird gelöscht</span>
+    <span class="n">obs</span><span class="o">.</span><span class="n">notify_observers</span><span class="p">(</span><span class="s">&#39;second message to all observer&#39;</span><span class="p">)</span> <span class="c"># die Nachricht muss 2 mal gesendet werden (2 Observer gibt es noch)</span>
+
+    <span class="c"># zum testen wird observer 1 nochmal hinzugefügt</span>
+    <span class="n">obs</span><span class="o">.</span><span class="n">add_observer</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">concrete_observer1</span><span class="p">)</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="../../doc_index.html">A05-Design Patterns 3.3.5 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Christian Maran &amp; Marlene Dorfinger.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

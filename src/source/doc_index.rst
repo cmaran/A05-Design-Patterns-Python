@@ -21,6 +21,13 @@ Contents:
 		SquareFactory.rst
 		Circle.rst
 		Square.rst
+		Singleton.rst
+		SingletonTest.rst
+		TestObserver.rst
+		Observer.rst
+		Observable.rst
+		ConcreteObservable.rst
+		ConcreteObserver.rst
 
 
 Indices and tables
