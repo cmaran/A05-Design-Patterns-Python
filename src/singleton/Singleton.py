@@ -7,7 +7,7 @@ Das Singleton-Pattern sorgt dafür, dass nur eine Instanz der Klasse erstellt wi
 
 class Singleton():
     """
-    In der Init-Methode wird die Instance auf None gestellt, außerdem bekommt man die Klasse.
+    In der Init-Methode wird die Instance auf None gestellt, außerdem bekommt man die Klasse die nur einmal Instanziert werden darf.
     """
 
     def __init__(self, klasse):  # Klasse ist die, die nach dem @Singleton steht
