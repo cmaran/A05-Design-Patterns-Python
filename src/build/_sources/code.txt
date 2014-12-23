@@ -1,0 +1,22 @@
+Design Patterns
+========
+
+Design Patterns
+------------
+
+.. py:currentmodule:: adapter.Adapter
+.. autoclass:: Adapter
+	:members:
+	
+..autofunction:: __init__
+
+---------------------------------------------
+
+..autofunction:: __getattr__
+
+
+.. py:currentmodule:: decorator.Decorator
+.. autoclass:: Student
+	:members:
+	
+..autofunction:: __init__

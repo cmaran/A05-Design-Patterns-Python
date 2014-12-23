@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Decorator Pattern &mdash; A05-Design Patterns 3.3.5 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '3.3.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="A05-Design Patterns 3.3.5 documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="doc_index.html">A05-Design Patterns 3.3.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="decorator-pattern">
+<h1>Decorator Pattern<a class="headerlink" href="#decorator-pattern" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="decorator-class">
+<h2>Decorator Class<a class="headerlink" href="#decorator-class" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="decorator.Decorator.Student">
+<em class="property">class </em><tt class="descclassname">decorator.Decorator.</tt><tt class="descname">Student</tt><big>(</big><em>fName</em>, <em>sName</em><big>)</big><a class="reference internal" href="_modules/decorator/Decorator.html#Student"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decorator.Decorator.Student" title="Permalink to this definition">¶</a></dt>
+<dd><p>Student</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>fName</strong> (<em>String</em>) &#8211; First name</li>
+<li><strong>sName</strong> (<em>int</em>) &#8211; Surname</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="decorator.Decorator.Student.bold_decorate">
+<tt class="descname">bold_decorate</tt><big>(</big><em>func</em><big>)</big><a class="reference internal" href="_modules/decorator/Decorator.html#Student.bold_decorate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decorator.Decorator.Student.bold_decorate" title="Permalink to this definition">¶</a></dt>
+<dd><p>decorator-function for paragraphs</p>
+<p>decorates the given name with Bold-Tags</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="decorator.Decorator.Student.italic_decorate">
+<tt class="descname">italic_decorate</tt><big>(</big><em>func</em><big>)</big><a class="reference internal" href="_modules/decorator/Decorator.html#Student.italic_decorate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decorator.Decorator.Student.italic_decorate" title="Permalink to this definition">¶</a></dt>
+<dd><p>decorator-function for paragraphs</p>
+<p>decorates the given name with Italic-Tags</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="decorator.Decorator.Student.paragraph_decorate">
+<tt class="descname">paragraph_decorate</tt><big>(</big><em>func</em><big>)</big><a class="reference internal" href="_modules/decorator/Decorator.html#Student.paragraph_decorate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decorator.Decorator.Student.paragraph_decorate" title="Permalink to this definition">¶</a></dt>
+<dd><p>decorator-function for paragraphs</p>
+<p>decorates the given name with Paragraph-Tags</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="decorator.Decorator.Student.strong_decorate">
+<tt class="descname">strong_decorate</tt><big>(</big><em>func</em><big>)</big><a class="reference internal" href="_modules/decorator/Decorator.html#Student.strong_decorate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#decorator.Decorator.Student.strong_decorate" title="Permalink to this definition">¶</a></dt>
+<dd><p>decorator-function for paragraphs</p>
+<p>decorates the given name with Strong-Tags</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<p>..autofunction:: __init__</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="doc_index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Decorator Pattern</a><ul>
+<li><a class="reference internal" href="#decorator-class">Decorator Class</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/Decorator.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="doc_index.html">A05-Design Patterns 3.3.5 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Christian Maran &amp; Marlene Dorfinger.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
