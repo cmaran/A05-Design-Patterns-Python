@@ -9,7 +9,7 @@ class Observer(object):
     def __init__(self):
         pass
 
-    def notify(self, message):
+    def update(self, message):
         pass
 
 
@@ -22,5 +22,5 @@ class ConcreteObserver(Observer):
     """
     Die Methode notify benachrichtigt den konkreten Observer mit einer Message (Message wird im Observable festgelegt).
     """
-    def notify(self, message):
+    def update(self, message):
         print(message)

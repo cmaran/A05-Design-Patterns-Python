@@ -15,7 +15,7 @@ class Observable(object): # da es in Python keine Interfaces gibt wird es so gel
     def remove_observer(self, name, observer):
         pass
 
-    def notify_all(self, message):
+    def notify_observers(self, message):
         pass
 
 
@@ -56,6 +56,6 @@ class ConcreteObservable(Observable):
     """
     Mit der notify_all Methode werden alle Observer mit einer Massage benachrichtigt.
     """
-    def notify_all(self, message):
+    def notify_observers(self, message):
         for observer in self._observers: #allen observer wird eine Nachricht gesendet
-            observer.notify(message)
+            observer.update(message)
