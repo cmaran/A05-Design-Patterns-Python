@@ -17,8 +17,8 @@ class TestObserver():
     obs.add_observer(2, concrete_observer2)
     obs.add_observer(3, concrete_observer3)
     obs.notify_observers('message to all observer') # Nachricht muss 3 mal gesendet werden (an 3 Observer)
-    obs.remove_observer(3, concrete_observer3)  # Observer 3 wird gelöscht
-    obs.notify_observers('message to all observer') # die Nachricht muss 2 mal gesendet werden (2 Observer gibt es noch)
+    obs.remove_observer(1, concrete_observer3)  # Observer 3 wird gelöscht
+    obs.notify_observers('second message to all observer') # die Nachricht muss 2 mal gesendet werden (2 Observer gibt es noch)
 
     # zum testen wird observer 1 nochmal hinzugefügt
     obs.add_observer(1, concrete_observer1)
