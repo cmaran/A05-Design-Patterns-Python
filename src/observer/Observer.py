@@ -6,10 +6,10 @@ Die Klasse Observer erstellt einen neuen Observer. Dieser kann dann ins Observab
 
 
 class Observer(object):
-    def __init__(self, *args, **kwargs):
+    def __init__(self):
         pass
 
-    def notify(self, *args, **kwargs):
+    def notify(self, message):
         pass
 
 
